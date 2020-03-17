@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: person-api
+  labels:
+    app: person-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: person-api
+  template:
+    metadata:
+      labels:
+        app: person-api
+    spec:
+      containers:
+        - name: person-api
+          imagePullPolicy: IfNotPresent
+          image: springio/person-api:latest
+          ports:
+            - containerPort: 8080
