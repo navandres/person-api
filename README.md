@@ -41,5 +41,3 @@ see the pods running into the minikube cluser:
 	>$ kubectl get pods
 	NAME                          READY   STATUS    RESTARTS   AGE
 	person-api-77c56dff9f-j68rh   1/1     Running   0           4m
-
-This is a test.
